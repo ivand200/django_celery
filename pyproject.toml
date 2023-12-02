@@ -1,0 +1,17 @@
+[tool.ruff]
+fix = true
+unsafe-fixes = true
+line-length = 120
+select = ["ALL"]
+indent-width = 4
+ignore = ["E1", "EM", "FBT", "TRY003", "S101", "D1", "FA", "ANN101"]
+fixable = ["ALL"]
+cache-dir = "/tmp/ruff-cache/"
+
+[tool.ruff.isort]
+no-lines-before = ["standard-library", "local-folder"]
+known-third-party = []
+known-local-folder = ["whole_app"]
+
+[tool.ruff.extend-per-file-ignores]
+"tests/*.py" = ["ANN401", "S101", "S311"]
